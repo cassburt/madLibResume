@@ -1,0 +1,48 @@
+h1 {
+  font-family: 'Lucida Sans Typewriter', monospace;
+  color: #6F2121;
+  text-align: center;
+  font-size: 3em;
+}
+h2 {
+  font-family: 'Lucida Sans Typewriter', monospace;
+  font-style: italic;
+  color: #E29D9D;
+  text-align: center;
+  font-size: 2em;
+}
+h3 {
+  font-family: 'Lucida Sans Typewriter', monospace;
+  color: #6F2121;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#origin {
+  text-align: center;
+  color: #216E21;
+  font-style: italic;
+  font-size: 1.5em;
+}
+#school {
+  text-align: center;
+  color: #216E21;
+  font-style: italic;
+  font-size: 1.5em;
+}
+#work {
+  text-align: center;
+  color: #216E21;
+  font-style: italic;
+  font-size: 1.5em;
+}
+p {
+  text-align: center;
+}
+div {
+  text-align: center;
+}
+ul {
+  width: 20%;
+  margin:auto;
+}
