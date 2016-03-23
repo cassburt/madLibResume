@@ -10,36 +10,22 @@ while (gameStart.toLowerCase() != "yes" && gameStart.toLowerCase() != "y" && gam
 //Rules: Give the user the rules of the game
 if (gameStart.toLowerCase() == "yes" || gameStart.toLowerCase() == "y") {
   gameStart = alert("let's play a game. Fill in my bio by answering the questions that follow.");
-  //Game condensed:
-  //var guess = prompt(ask);
-  //if answer == true {
-  //}
 
   //Game: Have the user fill in the blanks
-  var homeTown = prompt("Let's begin with an easy one. In which state was I born?");
-  if (homeTown.toLowerCase() == "in" || homeTown.toLowerCase() == "indiana") {
-    document.getElementById("origin").innerHTML = homeTown + "<br>" + "<img src='indiana.png'>";
-  } else {
-    (document.getElementById("origin").innerHTML = "WRONG!");
-    var myElement = document.querySelector("#origin");
-    myElement.style.color = "red";
+  function madLib(question, answer, answer2, id, image) {
+    var response = prompt(question);
+    if (response.toLowerCase() === answer.toLowerCase() || response.toLowerCase() === answer2.toLowerCase()) {
+      document.getElementById(id).innerHTML = response + "<br>" + image;
+    } else {
+      document.getElementById(id).style.color = "red";
+      document.getElementById(id).innerHTML = "WRONG!" + "<br>" + "<img src='wrong.jpg' height='200'width='300'>";
+    }
   }
-  var study = prompt("In which country did I teach abroad?");
-  if (study.toLowerCase() == "italy" || study.toLowerCase() == "poland") {
-    (document.getElementById("school").innerHTML = study + "<br>" + "<img src='italy.png'>");
-  } else {
-    (document.getElementById("school").innerHTML = "WRONG!");
-    var myElement = document.querySelector("#school");
-    myElement.style.color = "red";
-  }
-  var job = prompt("What was my first job in California?");
-  if (job.toLowerCase() == "author" || job.toLowerCase() == "writer") {
-    (document.getElementById("work").innerHTML = job + "<br>" + "<img src='writer.jpeg'>");
-  } else {
-    (document.getElementById("work").innerHTML = "WRONG!");
-    var myElement = document.querySelector("#work");
-    myElement.style.color = "red";
-  }
+
+  //madLibs: My list of madLibs
+  madLib("Let's begin with an easy one. In which state was I born?", "in", "indiana", "origin", "<img src='indiana.png' height='200'width='300'>");
+  madLib("Ok, let's try another. In which country did I teach abroad?", "italy", "poland", "school", "<img src='italy_poland.jpg' height='200'width='300'>");
+  madLib("Well, smartypants, what was my first job in California?", "writer", "author", "work", "<img src='writer.jpg' height='200'width='300'>");
 
 //Rejection: If the user decides not to play
 } else {
